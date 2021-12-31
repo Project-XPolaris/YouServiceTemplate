@@ -1,0 +1,25 @@
+addr: ':8000'
+application: "My Service"
+instance: "main"
+datasource: "sqlite"
+service:
+  name: "MyService"
+  display: "Mye Service"
+sqlite:
+  path: './database.db'
+youplus:
+  auth: false
+  enablepath: false
+  url: 'http://localhost:8999'
+  rpc: 'localhost:50055'
+  entity:
+    enable: false
+    name: "myservice"
+    version: 1
+log:
+  youlog:
+    application: "My Service"
+    instance: "main"
+    addr: "localhost:50052"
+    retry: 3000
+    remote: false
