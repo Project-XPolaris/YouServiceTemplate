@@ -17,5 +17,7 @@ func GetEngine() *haruka.Engine {
 	e.UseMiddleware(middleware.NewLoggerMiddleware())
 	e.UseMiddleware(middleware.NewPaginationMiddleware("page", "pageSize", 1, 20))
 	e.Router.GET("/hello", helloHandler)
+	e.Router.GET("/error", makeErrorHandler)
+	InitErrorHandler()
 	return e
 }

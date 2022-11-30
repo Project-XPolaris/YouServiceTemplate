@@ -10,3 +10,6 @@ var helloHandler haruka.RequestHandler = func(context *haruka.Context) {
 		"message": service.ExampleService(),
 	})
 }
+var makeErrorHandler haruka.RequestHandler = func(context *haruka.Context) {
+	appErrorHandler.RaiseHttpError(context, &ResourceNotFoundError{})
+}
